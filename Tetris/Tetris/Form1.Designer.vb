@@ -29,10 +29,12 @@ Partial Class Form1
         PictureBox2 = New PictureBox()
         Enemy = New PictureBox()
         Enemy2 = New PictureBox()
+        Enemy3 = New PictureBox()
         CType(Avatar, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Enemy3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Timer1
@@ -42,7 +44,7 @@ Partial Class Form1
         ' Avatar
         ' 
         Avatar.Image = CType(resources.GetObject("Avatar.Image"), Image)
-        Avatar.Location = New Point(1026, 32)
+        Avatar.Location = New Point(1033, 76)
         Avatar.Name = "Avatar"
         Avatar.Size = New Size(247, 235)
         Avatar.SizeMode = PictureBoxSizeMode.StretchImage
@@ -52,7 +54,7 @@ Partial Class Form1
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(602, 234)
+        PictureBox2.Location = New Point(614, 443)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(223, 156)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -79,11 +81,22 @@ Partial Class Form1
         Enemy2.TabIndex = 3
         Enemy2.TabStop = False
         ' 
+        ' Enemy3
+        ' 
+        Enemy3.Image = CType(resources.GetObject("Enemy3.Image"), Image)
+        Enemy3.Location = New Point(55, 326)
+        Enemy3.Name = "Enemy3"
+        Enemy3.Size = New Size(234, 244)
+        Enemy3.SizeMode = PictureBoxSizeMode.StretchImage
+        Enemy3.TabIndex = 4
+        Enemy3.TabStop = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1318, 1055)
+        Controls.Add(Enemy3)
         Controls.Add(Enemy2)
         Controls.Add(Enemy)
         Controls.Add(PictureBox2)
@@ -94,6 +107,7 @@ Partial Class Form1
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(Enemy, ComponentModel.ISupportInitialize).EndInit()
         CType(Enemy2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Enemy3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Timer1 As Timer
@@ -101,5 +115,6 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Enemy As PictureBox
     Friend WithEvents Enemy2 As PictureBox
+    Friend WithEvents Enemy3 As PictureBox
 
 End Class
