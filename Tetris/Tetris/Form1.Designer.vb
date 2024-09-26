@@ -24,29 +24,36 @@ Partial Class Form1
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Timer1 = New Timer(components)
+        MovementTimer = New Timer(components)
         Avatar = New PictureBox()
         PictureBox2 = New PictureBox()
         Enemy = New PictureBox()
         Enemy2 = New PictureBox()
         Enemy3 = New PictureBox()
         Platform = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox1 = New PictureBox()
+        ScoreLabel = New Label()
+        Label1 = New Label()
+        ScoreTimer = New Timer(components)
         CType(Avatar, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy3, ComponentModel.ISupportInitialize).BeginInit()
         CType(Platform, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Timer1
+        ' MovementTimer
         ' 
-        Timer1.Enabled = True
+        MovementTimer.Enabled = True
         ' 
         ' Avatar
         ' 
         Avatar.Image = CType(resources.GetObject("Avatar.Image"), Image)
-        Avatar.Location = New Point(1016, 147)
+        Avatar.Location = New Point(972, 137)
         Avatar.Name = "Avatar"
         Avatar.Size = New Size(77, 72)
         Avatar.SizeMode = PictureBoxSizeMode.StretchImage
@@ -56,12 +63,13 @@ Partial Class Form1
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(565, 498)
+        PictureBox2.Location = New Point(785, 284)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(57, 51)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
+        PictureBox2.Tag = "1"
         ' 
         ' Enemy
         ' 
@@ -99,16 +107,67 @@ Partial Class Form1
         Platform.Image = CType(resources.GetObject("Platform.Image"), Image)
         Platform.Location = New Point(315, 567)
         Platform.Name = "Platform"
-        Platform.Size = New Size(336, 32)
+        Platform.Size = New Size(479, 32)
         Platform.SizeMode = PictureBoxSizeMode.StretchImage
         Platform.TabIndex = 5
         Platform.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(1143, 412)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(479, 32)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 7
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(995, 498)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(27, 361)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 8
+        PictureBox1.TabStop = False
+        ' 
+        ' ScoreLabel
+        ' 
+        ScoreLabel.AutoSize = True
+        ScoreLabel.BorderStyle = BorderStyle.FixedSingle
+        ScoreLabel.Font = New Font("Bookman Old Style", 22.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        ScoreLabel.Location = New Point(160, 9)
+        ScoreLabel.Name = "ScoreLabel"
+        ScoreLabel.Size = New Size(46, 45)
+        ScoreLabel.TabIndex = 9
+        ScoreLabel.Text = "0"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BorderStyle = BorderStyle.FixedSingle
+        Label1.Font = New Font("Bookman Old Style", 22.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(-1, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(155, 45)
+        Label1.TabIndex = 10
+        Label1.Text = "Points:"
+        ' 
+        ' ScoreTimer
+        ' 
+        ScoreTimer.Enabled = True
+        ScoreTimer.Interval = 1000
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1318, 1055)
+        ClientSize = New Size(1819, 906)
+        Controls.Add(Label1)
+        Controls.Add(ScoreLabel)
+        Controls.Add(PictureBox1)
+        Controls.Add(PictureBox3)
         Controls.Add(Platform)
         Controls.Add(Enemy3)
         Controls.Add(Enemy2)
@@ -123,14 +182,22 @@ Partial Class Form1
         CType(Enemy2, ComponentModel.ISupportInitialize).EndInit()
         CType(Enemy3, ComponentModel.ISupportInitialize).EndInit()
         CType(Platform, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents MovementTimer As Timer
     Friend WithEvents Avatar As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Enemy As PictureBox
     Friend WithEvents Enemy2 As PictureBox
     Friend WithEvents Enemy3 As PictureBox
     Friend WithEvents Platform As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ScoreLabel As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ScoreTimer As Timer
 
 End Class
