@@ -1,0 +1,21 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="PikaButton" Content="Pika Stats" HorizontalAlignment="Left" Margin="92,35,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BulbButton" Content="BulbStats" HorizontalAlignment="Left" Margin="361,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.164,0.383"/>
+        <Button x:Name="WaterButton" Content="WaterStats" HorizontalAlignment="Left" Margin="632,35,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="Pika" HorizontalAlignment="Left" Height="118" Margin="53,101,0,0" VerticalAlignment="Top" Width="118" Stretch="Fill" Source="/download (6).jpg" Visibility="Hidden"/>
+        <Image x:Name="Bulb" HorizontalAlignment="Left" Height="113" Margin="326,101,0,0" VerticalAlignment="Top" Width="122" Source="/download (7).jpg" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="Water" HorizontalAlignment="Left" Height="113" Margin="605,101,0,0" VerticalAlignment="Top" Width="114" Source="/download (8).jpg" Stretch="Fill" Visibility="Hidden"/>
+        <TextBox x:Name="PikaStats" HorizontalAlignment="Left" Margin="53,265,0,0" TextWrapping="Wrap" Text="Type: Electric, Evolution: 2/3, Height: 0.4 m (1′04″), Weight:  6.0 kg (13.2 lbs)  " VerticalAlignment="Top" Width="143" Height="104" Visibility="Hidden" />
+        <TextBox x:Name="BulbStats" HorizontalAlignment="Left" Margin="316,265,0,0" TextWrapping="Wrap" Text="Type: Plant, Evolution: 1, Height: 0.7 m (2′04″), Weight: 6.9 kg (15.2 lbs) " VerticalAlignment="Top" Width="142" Height="104" Visibility="Hidden" />
+        <TextBox x:Name="WaterStats" HorizontalAlignment="Left" Margin="576,265,0,0" TextWrapping="Wrap" Text="Type: Water, Evolution: 1, Height: 0.5 m (1′08″), Weight: 9.0 kg (19.8 lbs) " VerticalAlignment="Top" Width="143" Height="104" Visibility="Hidden" />
+
+    </Grid>
+</Window>
